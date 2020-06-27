@@ -46,6 +46,7 @@ function SignIn(props) {
 
   const handleLogin = () => {
     if (email !== "" && password !== "") {
+      setAuthIsLoading(true)
       Axios.post("https://api.atata57.com/login", {
         email: email,
         password: password,
